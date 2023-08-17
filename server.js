@@ -15,13 +15,7 @@ mongoose.connect(DB,{
     console.log('connedted to remote DB');
 });
 
-// const testUser=new User({})
-// testUser.save().then(doc=>{
-//     console.log(doc);
-// }).catch(err=>{
-//     console.log('ERROR',err)
-// });
-// console.log(process.env);
+
 
 const port=process.env.PORT || 8000;
 app.listen(port,()=>{

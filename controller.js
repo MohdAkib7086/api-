@@ -102,9 +102,11 @@ exports.deleteUser =async (req, res) => {
         }
 
         await User.deleteOne({Email:req.params.email});
-        res.status(204).json({
+        res.status(200).json({
             status: 'success',
-            data: null
+            data: {
+                message:"successfully deleted"
+            }
           });
     }catch(err){
         res.status(404).json({
